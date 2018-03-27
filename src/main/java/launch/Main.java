@@ -106,13 +106,14 @@ public class Main {
 
         tomcat.start();
         tomcat.getServer().await();
-        
+
         // Database Connection
-        try{
+        try {
             Database bd = new Database();
             Connection connect = bd.getConnection();
         }  catch (SQLException error) {
-            throw new Exception("Problem with when opening the connection : " + error.getMessage());
+            throw new Exception("Problem with when opening the connection : "
+                    + error.getMessage());
         }
     }
 }

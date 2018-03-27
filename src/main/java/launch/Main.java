@@ -1,12 +1,9 @@
 package launch;
 
-import database.Database;
 import java.io.File;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.sql.Connection;
-import java.sql.SQLException;
 
 import org.apache.catalina.WebResourceRoot;
 import org.apache.catalina.WebResourceSet;
@@ -106,14 +103,5 @@ public class Main {
 
         tomcat.start();
         tomcat.getServer().await();
-
-        // Database Connection
-        try {
-            Database bd = new Database();
-            Connection connect = bd.getConnection();
-        }  catch (SQLException error) {
-            throw new Exception("Problem with when opening the connection : "
-                    + error.getMessage());
-        }
     }
 }

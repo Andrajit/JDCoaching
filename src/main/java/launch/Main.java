@@ -48,7 +48,7 @@ public class Main {
 
     /**
      * Main Class.
-     * @param args
+     * @param args tableau args
      * @throws Exception Exception
      */
     public static void main(final String[] args) throws Exception {
